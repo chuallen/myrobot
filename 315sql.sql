@@ -243,6 +243,11 @@ and d.type = 3
 -- and d.status = 4
 and a.loan_code = 'HEB1201703180002';
 
+SELECT  a.`period`,a.`plan_repayment_total`,a.`plan_repayment_principal`,a.`current_start_date`,a.`current_end_date`,
+a.`plan_repayment_interest`,a.`penalty_interest`,a.`penalty_days`,a.`penalty_money`,a.daily_actual_should_paid_total
+FROM rec_loaner_repayment_plan a  WHERE a.loan_code='HEB1201703290004'
+
+
 
 
 
