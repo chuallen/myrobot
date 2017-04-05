@@ -247,6 +247,12 @@ SELECT  a.`period`,a.`plan_repayment_total`,a.`plan_repayment_principal`,a.`curr
 a.`plan_repayment_interest`,a.`penalty_interest`,a.`penalty_days`,a.`penalty_money`,a.daily_actual_should_paid_total
 FROM rec_loaner_repayment_plan a  WHERE a.loan_code='HEB1201703290004'
 
+SELECT a.`period`,a.`plan_repayment_total` AS 月还金额,a.`plan_repayment_principal` AS 本金,a.`current_start_date` AS 本期起始日期,a.`current_end_date` AS 本期还款日期 ,
+a.`plan_repayment_interest` AS 利息,a.`penalty_interest` AS 罚息,a.`penalty_days` AS 逾期天数,a.`penalty_money` AS 逾期违约金,a.daily_actual_should_paid_total AS 每日更新实际应还总额,
+STATUS AS 还款状态,current_period_overdue_total AS 本期逾期总额
+
+FROM rec_loaner_repayment_plan a WHERE a.loan_code='HEB1201703290004'
+
 
 
 
